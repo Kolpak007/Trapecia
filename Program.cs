@@ -21,14 +21,14 @@ class IsoscelesTrapezoid
         bool basesParallel = AreParallel(A, B, C, D);
         double side1 = Point.Distance(A, D);
         double side2 = Point.Distance(B, C);
-        return basesParallel && Math.Abs(side1 - side2) < 1e-3;
+        return basesParallel && Math.Abs(side1 - side2) < 1e-3; // Порог точности сравнения сторон (1e-3) слишком высокий.
     }
 
     private bool AreParallel(Point p1, Point p2, Point p3, Point p4)
     {
         double dx1 = p2.X - p1.X, dy1 = p2.Y - p1.Y;
         double dx2 = p4.X - p3.X, dy2 = p4.Y - p3.Y;
-        return Math.Abs(dx1 * dy2 - dx2 * dy1) < 1e-6;
+        return Math.Abs(dx1 * dy2 - dx2 * dy1) < 1e-6; 
     }
 
     public double Perimeter() =>
