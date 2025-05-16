@@ -21,7 +21,7 @@ class IsoscelesTrapezoid
         bool basesParallel = AreParallel(A, B, C, D);
         double side1 = Point.Distance(A, D);
         double side2 = Point.Distance(B, C);
-        return basesParallel && Math.Abs(side1 - side2) < 1e-3; // Порог точности сравнения сторон (1e-3) слишком высокий.
+        return basesParallel && Math.Abs(side1 - side2) < 1e-6;
     }
 
     private bool AreParallel(Point p1, Point p2, Point p3, Point p4)
