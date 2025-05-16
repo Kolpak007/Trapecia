@@ -47,7 +47,7 @@ class Program
 {
     static void Main()
     {
-        var trapezoids = new List // Отсутствует <IsoscelesTrapezoid>
+        var trapezoids = new List<IsoscelesTrapezoid> // ошибка исправлена
         {
             new IsoscelesTrapezoid(new Point(0,0), new Point(4,0), new Point(3,3), new Point(1,3)),
             new IsoscelesTrapezoid(new Point(0,0), new Point(6,0), new Point(5,2), new Point(1,2)),
